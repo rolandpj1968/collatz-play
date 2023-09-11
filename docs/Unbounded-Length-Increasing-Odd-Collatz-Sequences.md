@@ -6,7 +6,7 @@ Here we assume familiarity with the above basic definitions, and consider a mino
 
 Accordingly we consider odd integers only, and define the following (Odd-Collatz) generator function:
 
-> $`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2<sup>i</sup>.m`$, defined for odd positive $`n`$
+> $`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
 An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f(n), f((f(n)), ...`$ and trivially comprises odd positive integers only.
 
@@ -22,7 +22,7 @@ $`f(n) < n`$ for $`n = 4m+1`$, where $`m`$ is a positive integer
 
 ## Proof
 
-$`3n+1 = 3(4m+1) + 1 = 12m + 4 = 2<sup>2</sup>.(3m+1)`$
+$`3n+1 = 3(4m+1) + 1 = 12m + 4 = 2^2.(3m+1)`$
 
 Hence $`f(n) <= 3m+1 < 4m+1 = n`$.
 
@@ -53,9 +53,9 @@ Lemma A and Lemma B allow us to partition f(n) into three cases:
 
 Note that this covers all odd positive integers $`n`$.
 
-We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, ...`$, rising subsequences where $`f<sup>i</sup>(n) < f<sup>i+1</sup>(n) < f<sup>i+2</sup>(n) < ...`$, and falling subsequences where $`f<sup>i</sup>(n) > f<sup>i+1</sup>(n) > f<sup>i+2</sup>(n) < ...`$
+We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, ...`$, rising subsequences where $`f^i(n) < f^{i+1}(n) < f^{i+2}(n) < ...`$, and falling subsequences where $`f^i(n) > f^{i+1}(n) > f^{i+2}(n) < ...`$
 
-For rising subsequences, all $`f<sup>i</sup>(n)`$ within the rising subsequence are of the form $`4m<sub>i</sub>+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m<sub>i</sub>+1`$.
+For rising subsequences, all $`f^i(n)`$ within the rising subsequence are of the form $`4m<sub>i</sub>+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m<sub>i</sub>+1`$.
 
 Odd-Collatz sequences comprise alternating rising and falling subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary sequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
 
