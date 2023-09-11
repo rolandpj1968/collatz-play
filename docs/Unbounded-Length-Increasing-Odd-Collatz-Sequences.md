@@ -85,8 +85,6 @@ Note that this does not disprove the Collatz Conjecture - while there is no uppe
 
 ## Proof
 
-Sketch for now...
-
 Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
 
 Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, \dots, 4n_{i+k-1}+3, f_o(4n_{i+k-1}+3)`$.
