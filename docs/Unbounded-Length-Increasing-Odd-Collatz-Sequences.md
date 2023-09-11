@@ -16,6 +16,14 @@ It can be trivially seen that there is a 1:1 mapping between Odd-Collatz sequenc
 
 It is also trivially observed that Collatz sequences starting with even numbers add nothing interesting to the problem space - they simply reduce to an initial odd number in the sequence once all possible divisions by $`2`$ are complete.
 
+Some examples of Odd-Collatz sequences are the following [with corresponding Collatz sequences in brackets]:
+
+ - $`1, 1, 1, 1, 1, ...`$ [$`1, 4, 2, 1, 4, 2, 1, ...`$]
+ - $`3, 5, 1, 1, ...`$ [$`3, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1, ...`$]
+ - $`7, 11, 17, 13, 5, ...`$ [$`7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, ...`$]
+
+It can be observed that the Odd-Collatz sequences are significantly more compact than Collatz sequences, and arguably focus on the more interesting transitions between odd numbers. 
+
 # Lemma A
 
 $`f_o(n) < n`$ for $`n = 4m+1`$, where $`m`$ is a positive integer
