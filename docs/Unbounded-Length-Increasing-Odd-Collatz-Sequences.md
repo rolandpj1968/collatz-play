@@ -6,7 +6,7 @@ Here we assume familiarity with the above basic definitions, and consider a mino
 
 Accordingly we consider odd integers only, and define the following (Odd-Collatz) generator function:
 
-> $`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
+    $`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
 An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f(n), f((f(n)), \dots`$ and trivially comprises odd positive integers only.
 
@@ -67,7 +67,7 @@ Note that this does not disprove the Collatz Conjecture - while there is no uppe
 
 ## Proof
 
-Sketch for now \dots
+Sketch for now...
 
 Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
 
@@ -81,6 +81,6 @@ We now show that $`s_{2}`$ is a rising Odd-Collatz subsequence.
   2. $`s_{2}`$ is a valid Odd-Collatz subsequence as can be proven using the substitution $`n_{j} = 4m_{j}+3`$ and some elementary algebra.
   3. The last entry of $`s_{2}`$ is trivially rising, since $`4n_{i+k-1}+3`$ is of the form of Lemma B
 
-Theorem 1 follows by induction starting, for example, with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest rising subsequence length and then showing contradiction by building a longer rising subsequence via the above construction.
+Theorem 1 follows by induction starting with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest rising subsequence length and then showing contradiction by building a longer rising subsequence via the above construction.
 
  
