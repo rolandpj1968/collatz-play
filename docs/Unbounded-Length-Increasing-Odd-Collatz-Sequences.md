@@ -81,6 +81,6 @@ We now show that $`s_{2}`$ is a rising Odd-Collatz subsequence.
   2. $`s_{2}`$ is a valid Odd-Collatz subsequence as can be proven using the substitution $`n_{j} = 4m_{j}+3`$ and some elementary algebra.
   3. The last entry of $`s_{2}`$ is trivially rising, since $`4n_{i+k-1}+3`$ is of the form of Lemma B
 
-Theorem 1 follows by induction starting, for example, with a length $`1`$ subsequence comprising any odd number.
+Theorem 1 follows by induction starting, for example, with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest rising subsequence length and then showing contradiction by building a longer rising subsequence via the above construction.
 
  
