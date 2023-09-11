@@ -6,7 +6,7 @@ Here we assume familiarity with the above basic definitions, and consider a mino
 
 Accordingly we consider odd integers only, and define the following (Odd-Collatz) generator function:
 
-    $`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
+&nbsp;&nbsp;&nbsp;&nbsp;$`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
 An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f(n), f((f(n)), \dots`$ and trivially comprises odd positive integers only.
 
