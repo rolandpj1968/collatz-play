@@ -8,7 +8,7 @@ Accordingly we consider odd integers only, and define the following (Odd-Collatz
 
 > $`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
-An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f(n), f((f(n)), ...`$ and trivially comprises odd positive integers only.
+An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f(n), f((f(n)), \dots`$ and trivially comprises odd positive integers only.
 
 Intuitively, the Odd-Collatz generator function computes the characteristic $`3n+1`$ Collatz generator function _and_ removes all multiples of $`2`$ in a single step.
 
@@ -53,7 +53,7 @@ Lemma A and Lemma B allow us to partition f(n) into three cases:
 
 Note that this covers all odd positive integers $`n`$.
 
-We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, ...`$, rising subsequences where $`f^i(n) < f^{i+1}(n) < f^{i+2}(n) < ...`$, and falling subsequences where $`f^i(n) > f^{i+1}(n) > f^{i+2}(n) < ...`$
+We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, \dots`$, rising subsequences where $`f^i(n) < f^{i+1}(n) < f^{i+2}(n) < \dots`$, and falling subsequences where $`f^i(n) > f^{i+1}(n) > f^{i+2}(n) > \dots`$
 
 For rising subsequences, all $`f^i(n)`$ within the rising subsequence are of the form $`4m_i+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m_i+1`$.
 
@@ -67,11 +67,11 @@ Note that this does not disprove the Collatz Conjecture - while there is no uppe
 
 ## Proof
 
-Sketch for now...
+Sketch for now \dots
 
-Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, ..., n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
+Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
 
-Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, ..., 4n_{i+k-1}+3, f(4n_{i+k-1}+3)`$.
+Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, \dots, 4n_{i+k-1}+3, f(4n_{i+k-1}+3)`$.
 
 Clearly $`s_{2}`$ has length $`k+1`$.
 
