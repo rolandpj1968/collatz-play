@@ -65,7 +65,17 @@ $`f_o(4n+3) = 4f_o(n)+3`$ if $`n = 4m+3`$
 
 ## Proof
 
-Use the substitution $`n_{j} = 4m_{j}+3`$ and some elementary algebra...
+Firstly, $`f_o(4n+3) = f_o(4(4m+3)+3) = f_o(16m+15)`$.
+
+Now $`3(16m+15)+1 = 48m+46 = 2(24m+23)`$, and since $`24m+23`$ is odd, we have that $`f_o(4n+3) = f_o(16m+15) = 24m+23`$.
+
+Secondly, $`f_o(n) = 6m+5`$ by Lemma B.
+
+Accordingly $`4f_o(n)+3 = 4(6m+5)+3 = 24m+23`$.
+
+Hence $`f_o(4n+3) = 4f_o(n)+3 = 24m+23`$.
+
+QED
 
 # Theorem 1
 
