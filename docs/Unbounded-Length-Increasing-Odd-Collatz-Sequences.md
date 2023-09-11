@@ -46,7 +46,7 @@ QED
 
 # Discussion of Lemma A and Lemma B
 
-Lemma A and Lemma B allow us to partition f_o(n) into three cases:
+Lemma A and Lemma B allow us to partition $`f_o(n)`$ into three cases:
   1. $`n = 1`$, $`f_o(n) = n = 1`$
   2. $`n = 4m+1`$, $`m > 0`$, where $`f_o(n) < n`$
   3. $`n = 4m+3`$, $`m >= 0`$, where $`f_o(n) > n`$
@@ -61,7 +61,7 @@ Odd-Collatz sequences comprise alternating rising and falling subsequences, poss
 
 # Lemma C
 
-$`f_o(4n+3) = 4f_o(n)+3 if n = 4m+3`$
+$`f_o(4n+3) = 4f_o(n)+3`$ if $`n = 4m+3`$
 
 ## Proof
 
