@@ -55,7 +55,7 @@ Note that this covers all odd positive integers $`n`$.
 
 We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, ...`$, rising subsequences where $`f^i(n) < f^{i+1}(n) < f^{i+2}(n) < ...`$, and falling subsequences where $`f^i(n) > f^{i+1}(n) > f^{i+2}(n) < ...`$
 
-For rising subsequences, all $`f^i(n)`$ within the rising subsequence are of the form $`4m<sub>i</sub>+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m<sub>i</sub>+1`$.
+For rising subsequences, all $`f^i(n)`$ within the rising subsequence are of the form $`4m_i+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m_i+1`$.
 
 Odd-Collatz sequences comprise alternating rising and falling subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary sequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
 
@@ -69,17 +69,17 @@ Note that this does not disprove the Collatz Conjecture - while there is no uppe
 
 Sketch for now...
 
-Assume we have a rising Odd-Collatz subsequence $`s<sub>1</sub>`$ of length $`k`$: $`n<sub>i</sub>, n<sub>i+1</sub>, ..., n<sub>i+k-1</sub>`$, where $`n<sub>j</sub>`$ is thus of the form $`4m<sub>j</sub>+3`$ for $`i <= j < i+k-1`$ by Lemma B.
+Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, ..., n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
 
-Consider the sequence $`s<sub>2</sub>`$: $`4n<sub>i</sub>+3, 4n<sub>i+1</sub>+3, ..., 4n<sub>i+k-1</sub>+3, f(4n<sub>i+k-1</sub>+3)`$.
+Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, ..., 4n_{i+k-1}+3, f(4n_{i+k-1}+3)`$.
 
-Clearly $`s<sub>2</sub>`$ has length $`k+1`$.
+Clearly $`s_{2}`$ has length $`k+1`$.
 
-We now show that $`s<sub>2</sub>`$ is a rising Odd-Collatz subsequence.
+We now show that $`s_{2}`$ is a rising Odd-Collatz subsequence.
 
-  1. Since each element of $`s<sub>2</sub>`$ except the last is induced from $`s<sub>1</sub>`$ using the same element-wise positive monotonic formula, it is clearly rising.
-  2. $`s<sub>2</sub>`$ is a valid Odd-Collatz subsequence as can be proven using the substitution $`n<sub>j</sub> = 4m<sub>j</sub>+3`$ and some elementary algebra.
-  3. The last entry of $`s<sub>2</sub>`$ is trivially rising, since $`4n<sub>i+k-1</sub>+3`$ is of the form of Lemma B
+  1. Since each element of $`s_{2}`$ except the last is induced from $`s_{1}`$ using the same element-wise positive monotonic formula, it is clearly rising.
+  2. $`s_{2}`$ is a valid Odd-Collatz subsequence as can be proven using the substitution $`n_{j} = 4m_{j}+3`$ and some elementary algebra.
+  3. The last entry of $`s_{2}`$ is trivially rising, since $`4n_{i+k-1}+3`$ is of the form of Lemma B
 
 Theorem 1 follows by induction starting, for example, with a length $`1`$ subsequence comprising any odd number.
 
