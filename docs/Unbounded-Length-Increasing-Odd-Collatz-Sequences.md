@@ -2,13 +2,13 @@
 
 https://en.wikipedia.org/wiki/Collatz_conjecture defines Collatz sequences and introduces the unproven Collatz Conjecture.
 
-Here we assume familiarity with the above basic definitions, and consider a minor variant generator operation and sequence definition that ignores even numbers.
+Here we assume familiarity with the above basic definitions, and consider a minor variant generator function that obviates consideration of even numbers.
 
-Accordingly we consider only odd integers only, and define the following (Odd-Collatz) generator function:
+Accordingly we consider odd integers only, and define the following (Odd-Collatz) generator function:
 
- f(n) = m, where m is odd and 3n + 1 = (2<sup>i</sup>).m
+> f(n) = m, where m is odd and 3n + 1 = 2<sup>i</sup>.m, defined for odd positive n
  
-An Odd-Collatz sequence starting with an odd number n is then generated as n, f(n), f((f(n)), ...
+An Odd-Collatz sequence starting with an odd positive integer n is then generated as n, f(n), f((f(n)), ... and trivially comprises odd positive integers only.
 
 Intuitively, the Odd-Collatz generator function computes the characteristic 3n+1 Collatz formula _and_ removes all multiples of 2 in a single step.
 
@@ -18,11 +18,11 @@ It is also trivially observed that Collatz sequences starting with even numbers 
 
 # Lemma A
 
-For n = 4m+1, where m is a positive integer, f(n) < n.
+f(n) < n for n = 4m+1, where m is a positive integer
 
 ## Proof
 
-3n+1 = 3(4m+1) + 1 = 12m + 4 = (2<sup>2</sup>).(3m+1)
+3n+1 = 3(4m+1) + 1 = 12m + 4 = 2<sup>2</sup>.(3m+1)
 
 Hence f(n) <= 3m+1 < 4m+1 = n.
 
@@ -34,7 +34,7 @@ Note too that we exclude the special case m = 0, i.e. n = 1, for which 3m+1 = 4m
 
 # Lemma B
 
-For n = 4m+3, where m is a non-negative integer, f(n) > n.
+f(n) > n for n = 4m+3, where m is a non-negative integer
 
 ## Proof
 
