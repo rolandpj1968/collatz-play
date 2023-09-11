@@ -8,9 +8,9 @@ Accordingly we consider odd integers only, and define the following (Odd-Collatz
 
 &nbsp;&nbsp;&nbsp;&nbsp;$`f_o(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
-An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f_o(n), f_o((f_o(n)), \dots`$ and trivially comprises odd positive integers only.
-
 Intuitively, the Odd-Collatz generator function computes the characteristic $`3n+1`$ Collatz generator function _and_ removes all multiples of $`2`$ in a single step.
+
+An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f_o(n), f_o((f_o(n)), \dots`$ and by definition of $`f_o`$ comprises odd positive integers only.
 
 It can be trivially seen that there is a 1:1 mapping between Odd-Collatz sequences and Collatz sequences starting with an odd number. In fact the Odd-Collatz sequence corresponding to a given Collatz sequence is exactly that Collatz sequence with all even numbers removed. On the other hand the Collatz sequence corresponding with a given Odd-Collatz sequence is that Odd-Collatz sequence with even numbers added in between each pair of sequence elements according to the (original) Collatz generator function.
 
