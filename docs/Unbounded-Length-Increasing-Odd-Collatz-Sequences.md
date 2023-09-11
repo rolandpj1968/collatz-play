@@ -6,9 +6,9 @@ Here we assume familiarity with the above basic definitions, and consider a mino
 
 Accordingly we consider odd integers only, and define the following (Odd-Collatz) generator function:
 
-&nbsp;&nbsp;&nbsp;&nbsp;$`f(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
+&nbsp;&nbsp;&nbsp;&nbsp;$`f_o(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
-An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f(n), f((f(n)), \dots`$ and trivially comprises odd positive integers only.
+An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f_o(n), f_o((f_o(n)), \dots`$ and trivially comprises odd positive integers only.
 
 Intuitively, the Odd-Collatz generator function computes the characteristic $`3n+1`$ Collatz generator function _and_ removes all multiples of $`2`$ in a single step.
 
@@ -18,44 +18,44 @@ It is also trivially observed that Collatz sequences starting with even numbers 
 
 # Lemma A
 
-$`f(n) < n`$ for $`n = 4m+1`$, where $`m`$ is a positive integer
+$`f_o(n) < n`$ for $`n = 4m+1`$, where $`m`$ is a positive integer
 
 ## Proof
 
 $`3n+1 = 3(4m+1) + 1 = 12m + 4 = 2^2.(3m+1)`$
 
-Hence $`f(n) <= 3m+1 < 4m+1 = n`$.
+Hence $`f_o(n) <= 3m+1 < 4m+1 = n`$.
 
 QED.
 
-Note that $`3m+1`$ might contain further factors of $`2`$, hence $`f(n) <= 3m+1`$ is an inequality.
+Note that $`3m+1`$ might contain further factors of $`2`$, hence $`f_o(n) <= 3m+1`$ is an inequality.
 
-Note too that we exclude the special case $`m = 0`$, i.e. $`n = 1`$, for which $`3m+1 = 4m+1`$, and $`n = f(n) = 1`$.
+Note too that we exclude the special case $`m = 0`$, i.e. $`n = 1`$, for which $`3m+1 = 4m+1`$, and $`n = f_o(n) = 1`$.
 
 # Lemma B
 
-$`f(n) > n`$ for $`n = 4m+3`$, where $`m`$ is a non-negative integer
+$`f_o(n) > n`$ for $`n = 4m+3`$, where $`m`$ is a non-negative integer
 
 ## Proof
 
 $`3n+1 = 3(4m+3) + 1 = 12m + 10 = 2(6m+5)`$
 
-Since $`6m`$ is even, $`6m+5`$ is odd, hence $`f(n) = 6m+5 > 4m+3 = n`$.
+Since $`6m`$ is even, $`6m+5`$ is odd, hence $`f_o(n) = 6m+5 > 4m+3 = n`$.
 
 QED
 
 # Discussion of Lemma A and Lemma B
 
-Lemma A and Lemma B allow us to partition f(n) into three cases:
-  1. $`n = 1`$, $`f(n) = n = 1`$
-  2. $`n = 4m+1`$, $`m > 0`$, where $`f(n) < n`$
-  3. $`n = 4m+3`$, $`m >= 0`$, where $`f(n) > n`$
+Lemma A and Lemma B allow us to partition f_o(n) into three cases:
+  1. $`n = 1`$, $`f_o(n) = n = 1`$
+  2. $`n = 4m+1`$, $`m > 0`$, where $`f_o(n) < n`$
+  3. $`n = 4m+3`$, $`m >= 0`$, where $`f_o(n) > n`$
 
 Note that this covers all odd positive integers $`n`$.
 
-We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, \dots`$, rising subsequences where $`f^i(n) < f^{i+1}(n) < f^{i+2}(n) < \dots`$, and falling subsequences where $`f^i(n) > f^{i+1}(n) > f^{i+2}(n) > \dots`$
+We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, \dots`$, rising subsequences where $`f_o^i(n) < f_o^{i+1}(n) < f_o^{i+2}(n) < \dots`$, and falling subsequences where $`f_o^i(n) > f_o^{i+1}(n) > f_o^{i+2}(n) > \dots`$
 
-For rising subsequences, all $`f^i(n)`$ within the rising subsequence are of the form $`4m_i+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m_i+1`$.
+For rising subsequences, all $`f_o^i(n)`$ within the rising subsequence are of the form $`4m_i+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m_i+1`$.
 
 Odd-Collatz sequences comprise alternating rising and falling subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary sequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
 
@@ -71,7 +71,7 @@ Sketch for now...
 
 Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
 
-Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, \dots, 4n_{i+k-1}+3, f(4n_{i+k-1}+3)`$.
+Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, \dots, 4n_{i+k-1}+3, f_o(4n_{i+k-1}+3)`$.
 
 Clearly $`s_{2}`$ has length $`k+1`$.
 
