@@ -1,3 +1,7 @@
+# Chapter 1 - Odd-Collatz Definition and Unbounded Increasing Odd-Collatz Sequences
+
+In this chapter we provide an alternative formulation of Collatz sequences and prove an initial result about their behaviour.
+
 # Background
 
 https://en.wikipedia.org/wiki/Collatz_conjecture defines Collatz sequences and introduces the unproven Collatz Conjecture.
