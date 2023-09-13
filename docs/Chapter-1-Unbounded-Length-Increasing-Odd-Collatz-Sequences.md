@@ -58,7 +58,7 @@ QED
 
 # Discussion of Lemma A and Lemma B
 
-Lemma A and Lemma B allow us to partition $`f_o(n)`$ into three cases:
+[Lemma A](#lemma-a) and [Lemma B](#lemma-b) allow us to partition $`f_o(n)`$ into three cases:
   1. $`n = 1`$, $`f_o(n) = n = 1`$
   2. $`n = 4m+1`$, $`m > 0`$, where $`f_o(n) < n`$
   3. $`n = 4m+3`$, $`m >= 0`$, where $`f_o(n) > n`$
@@ -81,7 +81,7 @@ Firstly, $`f_o(4n+3) = f_o(4(4m+3)+3) = f_o(16m+15)`$.
 
 Now $`3(16m+15)+1 = 48m+46 = 2(24m+23)`$, and since $`24m+23`$ is odd, we have that $`f_o(4n+3) = f_o(16m+15) = 24m+23`$.
 
-Secondly, $`f_o(n) = 6m+5`$ as already shown in the proof of Lemma B.
+Secondly, $`f_o(n) = 6m+5`$ as already shown in the proof of [Lemma B](#lemma-b).
 
 Accordingly $`4f_o(n)+3 = 4(6m+5)+3 = 24m+23`$.
 
@@ -97,7 +97,7 @@ Note that this does not disprove the Collatz Conjecture - while there is no uppe
 
 ## Proof
 
-Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by Lemma B.
+Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by [Lemma B](#lemma-b).
 
 Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, \dots, 4n_{i+k-1}+3, f_o(4n_{i+k-1}+3)`$.
 
@@ -106,12 +106,7 @@ Clearly $`s_{2}`$ has length $`k+1`$.
 We now show that $`s_{2}`$ is a rising Odd-Collatz subsequence.
 
   1. Since each element of $`s_{2}`$ except the last is induced from $`s_{1}`$ using the same element-wise positive monotonic formula, it is clearly rising.
-  2. $`s_{2}`$ is a valid Odd-Collatz subsequence by Lemma C.
-  3. The last entry of $`s_{2}`$ is rising, since $`4n_{i+k-1}+3`$ is of the form of Lemma B
+  2. $`s_{2}`$ is a valid Odd-Collatz subsequence by [Lemma C](#lemma-c).
+  3. The last entry of $`s_{2}`$ is rising, since $`4n_{i+k-1}+3`$ is of the form of [Lemma B](#lemma-b).
 
 Theorem 1 follows by induction starting with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest rising subsequence length and then showing contradiction by building a longer rising subsequence via the above construction.
-
- 
-# Testing
-
-[Lemma A](#lemma-a)
