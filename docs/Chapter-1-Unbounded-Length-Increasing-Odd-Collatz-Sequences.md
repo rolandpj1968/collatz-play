@@ -2,7 +2,7 @@
 
 In this chapter we provide an alternative formulation of Collatz sequences and prove an initial result about their behaviour.
 
-# Background
+## Background
 
 https://en.wikipedia.org/wiki/Collatz_conjecture defines Collatz sequences and introduces the unproven Collatz Conjecture.
 
@@ -28,11 +28,11 @@ Some examples of Odd-Collatz sequences are the following [with corresponding Col
 
 It can be observed that the Odd-Collatz sequences are significantly more compact than Collatz sequences, and arguably focus on the more interesting transitions between odd numbers. 
 
-# Lemma A
+## Lemma A
 
 $`f_o(n) < n`$ for $`n = 4m+1`$, where $`m`$ is a positive integer
 
-## Proof
+### Proof
 
 $`3n+1 = 3(4m+1) + 1 = 12m + 4 = 2^2.(3m+1)`$
 
@@ -44,11 +44,11 @@ Note that $`3m+1`$ might contain further factors of $`2`$, hence $`f_o(n) <= 3m+
 
 Note too that we exclude the special case $`m = 0`$, i.e. $`n = 1`$, for which $`3m+1 = 4m+1`$, and $`n = f_o(n) = 1`$.
 
-# Lemma B
+## Lemma B
 
 $`f_o(n) > n`$ for $`n = 4m+3`$, where $`m`$ is a non-negative integer
 
-## Proof
+### Proof
 
 $`3n+1 = 3(4m+3) + 1 = 12m + 10 = 2(6m+5)`$
 
@@ -56,7 +56,7 @@ Since $`6m`$ is even, $`6m+5`$ is odd, hence $`f_o(n) = 6m+5 > 4m+3 = n`$.
 
 QED
 
-# Discussion of Lemma A and Lemma B
+## Discussion of Lemma A and Lemma B
 
 [Lemma A](#lemma-a) and [Lemma B](#lemma-b) allow us to partition $`f_o(n)`$ into three cases:
   1. $`n = 1`$, $`f_o(n) = n = 1`$
@@ -71,11 +71,11 @@ For rising subsequences, all $`f_o^i(n)`$ within the rising subsequence are of t
 
 Odd-Collatz sequences comprise alternating rising and falling subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary sequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
 
-# Lemma C
+## Lemma C
 
 $`f_o(4n+3) = 4f_o(n)+3`$ if $`n = 4m+3`$
 
-## Proof
+### Proof
 
 Firstly, $`f_o(4n+3) = f_o(4(4m+3)+3) = f_o(16m+15)`$.
 
@@ -89,13 +89,13 @@ Hence $`f_o(4n+3) = 4f_o(n)+3 = 24m+23`$.
 
 QED
 
-# Theorem 1
+## Theorem 1
 
 There exist Odd-Collatz rising subsequences of arbitrary length $`l`$. Stated precisely, there is no positive integer $`j`$ for which there exists no Odd-Collatz rising subsequence of length $`j`$ (or greater).
 
 Note that this does not disprove the Collatz Conjecture - while there is no upper bound to the length of a rising Odd-Collatz subsequence, it is still plausible - and indeed likely - that all rising subsequences are finite in length.
 
-## Proof
+### Proof
 
 Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by [Lemma B](#lemma-b).
 
