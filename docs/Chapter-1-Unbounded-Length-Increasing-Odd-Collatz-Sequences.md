@@ -112,3 +112,6 @@ We now show that $`s_{2}`$ is a rising Odd-Collatz subsequence.
 Theorem 1 follows by induction starting with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest rising subsequence length and then showing contradiction by building a longer rising subsequence via the above construction.
 
  
+# Testing
+
+[Lemma A](#lemma-a)
