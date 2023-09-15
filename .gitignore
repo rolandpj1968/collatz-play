@@ -1,0 +1,6 @@
+*~
+*.o
+*.s
+*.out
+*.log
+src/power-of-2-factor-histo

@@ -28,7 +28,7 @@ Some examples of Odd-Collatz sequences are the following [with corresponding Col
 
 It can be observed that the Odd-Collatz sequences are significantly more compact than Collatz sequences, and arguably focus on the more interesting transitions between odd numbers. 
 
-## Lemma A
+## Lemma 1A
 
 $`f_o(n) < n`$ for $`n = 4m+1`$, where $`m`$ is a positive integer
 
@@ -44,7 +44,7 @@ Note that $`3m+1`$ might contain further factors of $`2`$, hence $`f_o(n) <= 3m+
 
 Note too that we exclude the special case $`m = 0`$, i.e. $`n = 1`$, for which $`3m+1 = 4m+1`$, and $`n = f_o(n) = 1`$.
 
-## Lemma B
+## Lemma 1B
 
 $`f_o(n) > n`$ for $`n = 4m+3`$, where $`m`$ is a non-negative integer
 
@@ -56,22 +56,22 @@ Since $`6m`$ is even, $`6m+5`$ is odd, hence $`f_o(n) = 6m+5 > 4m+3 = n`$.
 
 QED
 
-## Discussion of Lemma A and Lemma B
+## Discussion of Lemma 1A and Lemma 1B
 
-[Lemma A](#lemma-a) and [Lemma B](#lemma-b) allow us to partition $`f_o(n)`$ into three cases:
+[Lemma 1A](#lemma-1a) and [Lemma 1B](#lemma-1b) allow us to partition $`f_o(n)`$ into three cases:
   1. $`n = 1`$, $`f_o(n) = n = 1`$
   2. $`n = 4m+1`$, $`m > 0`$, where $`f_o(n) < n`$
   3. $`n = 4m+3`$, $`m >= 0`$, where $`f_o(n) > n`$
 
 Note that this covers all odd positive integers $`n`$.
 
-We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, \dots`$, rising subsequences where $`f_o^i(n) < f_o^{i+1}(n) < f_o^{i+2}(n) < \dots`$, and falling subsequences where $`f_o^i(n) > f_o^{i+1}(n) > f_o^{i+2}(n) > \dots`$
+We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, \dots`$, monotonically increasing subsequences where $`f_o^i(n) < f_o^{i+1}(n) < f_o^{i+2}(n) < \dots`$, and monotonically decreasing subsequences where $`f_o^i(n) > f_o^{i+1}(n) > f_o^{i+2}(n) > \dots`$
 
-For rising subsequences, all $`f_o^i(n)`$ within the rising subsequence are of the form $`4m_i+3`$ (except the last element of the sequence which starts a new falling sequence); similar for falling subsequences vis-a-vis $`4m_i+1`$.
+For monotonically increasing subsequences, all $`f_o^i(n)`$ within the monotonically increasing subsequence are of the form $`4m_i+3`$ (except the last element of the subsequence which starts a new monotonically decreasing subsequence); similar for monotonically decreasing subsequences vis-a-vis $`4m_i+1`$.
 
-Odd-Collatz sequences comprise alternating rising and falling subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary sequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
+Odd-Collatz sequences comprise alternating monotonically increasing and monotonically decreasing subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary subsequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
 
-## Lemma C
+## Lemma 1C
 
 $`f_o(4n+3) = 4f_o(n)+3`$ if $`n = 4m+3`$
 
@@ -81,7 +81,7 @@ Firstly, $`f_o(4n+3) = f_o(4(4m+3)+3) = f_o(16m+15)`$.
 
 Now $`3(16m+15)+1 = 48m+46 = 2(24m+23)`$, and since $`24m+23`$ is odd, we have that $`f_o(4n+3) = f_o(16m+15) = 24m+23`$.
 
-Secondly, $`f_o(n) = 6m+5`$ as already shown in the proof of [Lemma B](#lemma-b).
+Secondly, $`f_o(n) = 6m+5`$ as already shown in the proof of [Lemma 1B](#lemma-1b).
 
 Accordingly $`4f_o(n)+3 = 4(6m+5)+3 = 24m+23`$.
 
@@ -91,22 +91,22 @@ QED
 
 ## Theorem 1
 
-There exist Odd-Collatz rising subsequences of arbitrary length $`l`$. Stated precisely, there is no positive integer $`j`$ for which there exists no Odd-Collatz rising subsequence of length $`j`$ (or greater).
+There exist Odd-Collatz monotonically increasing Odd-Collatz subsequences of arbitrary length. Stated precisely, there is no positive integer $`j`$ for which there exists no monotonically increasing Odd-Collatz subsequence of length $`j`$ (or greater).
 
-Note that this does not disprove the Collatz Conjecture - while there is no upper bound to the length of a rising Odd-Collatz subsequence, it is still plausible - and indeed likely - that all rising subsequences are finite in length.
+Note that this does not disprove the Collatz Conjecture - while there is no upper bound to the length of a monotonically increasing Odd-Collatz subsequence, it is still plausible - and indeed likely - that all monotonically increasing subsequences are finite in length.
 
 ### Proof
 
-Assume we have a rising Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by [Lemma B](#lemma-b).
+Assume we have a monotonically increasing Odd-Collatz subsequence $`s_1`$ of length $`k`$: $`n_{i}, n_{i+1}, \dots, n_{i+k-1}`$, where $`n_{j}`$ is thus of the form $`4m_{j}+3`$ for $`i <= j < i+k-1`$ by [Lemma 1B](#lemma-1b).
 
 Consider the sequence $`s_{2}`$: $`4n_{i}+3, 4n_{i+1}+3, \dots, 4n_{i+k-1}+3, f_o(4n_{i+k-1}+3)`$.
 
 Clearly $`s_{2}`$ has length $`k+1`$.
 
-We now show that $`s_{2}`$ is a rising Odd-Collatz subsequence.
+We now show that $`s_{2}`$ is a monotonically increasing Odd-Collatz (sub)sequence.
 
-  1. Since each element of $`s_{2}`$ except the last is induced from $`s_{1}`$ using the same element-wise positive monotonic formula, it is clearly rising.
-  2. $`s_{2}`$ is a valid Odd-Collatz subsequence by [Lemma C](#lemma-c).
-  3. The last entry of $`s_{2}`$ is rising, since $`4n_{i+k-1}+3`$ is of the form of [Lemma B](#lemma-b).
+  1. Since each element of $`s_{2}`$ except the last is induced from $`s_{1}`$ using the same element-wise positive monotonic formula, it is clearly monotonically increasing.
+  2. $`s_{2}`$ is a valid Odd-Collatz subsequence by [Lemma 1C](#lemma-1c).
+  3. The last entry of $`s_{2}`$ is monotonically increasing, since $`4n_{i+k-1}+3`$ is of the form of [Lemma 1B](#lemma-1b).
 
-Theorem 1 follows by induction starting with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest rising subsequence length and then showing contradiction by building a longer rising subsequence via the above construction.
+Theorem 1 follows by induction starting with a length $`1`$ subsequence comprising any odd number; or alternatively by reductio ad absurdum assuming a longest monotonically increasing subsequence length and then showing contradiction by building a longer monotonically increasing subsequence via the above construction.
