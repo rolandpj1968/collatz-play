@@ -1,4 +1,4 @@
-# Chapter 1 - Odd-Collatz Definition and Unbounded Increasing Odd-Collatz Sequences
+# Chapter 1 - Odd-Collatz Definition and Unbounded Increasing Odd-Collatz Subsequences
 
 In this chapter we provide an alternative formulation of Collatz sequences and prove an initial result about their behaviour.
 
