@@ -6,7 +6,7 @@ In this chapter we will show that although there is no upper bound on the length
 
 ## Lemma 2B
 
-The Odd-Collatz (sub)sequence $`n_0, f_o(n_0), f_o(f_o(n_0)), \dots, f_o^{i}(n_0)`$ where $`i > 1` is monotonically increasing _iff_ $`n_0 = 2^{i+1}m^{'} + 2^{i+1} - 1`$ for some $`m^{'} \gteq 0`$.
+The Odd-Collatz (sub)sequence $`n_0, f_o(n_0), f_o(f_o(n_0)), \dots, f_o^{i}(n_0)`$ where $`i > 1`$ is monotonically increasing _iff_ $`n_0 = 2^{i+1}m^{'} + 2^{i+1} - 1`$ for some $`m^{'} \gteq 0`$.
 
 ### Proof
 
