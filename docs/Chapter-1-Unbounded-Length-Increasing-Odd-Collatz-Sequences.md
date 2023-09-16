@@ -14,7 +14,7 @@ Accordingly we consider odd integers only, and define the following (Odd-Collatz
 
 &nbsp;&nbsp;&nbsp;&nbsp;$`f_o(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
-Intuitively, the Odd-Collatz generator function computes the characteristic $`3n+1`$ Collatz generator function _and_ removes all multiples of $`2`$ in a single step.
+Intuitively, the Odd-Collatz generator function $`f_o`$ computes the characteristic $`3n+1`$ Collatz generator function (for odd integers) _and_ removes all multiples of $`2`$ in a single step.
 
 An Odd-Collatz sequence starting with an odd positive integer $`n`$ is then generated as $`n, f_o(n), f_o((f_o(n)), \dots`$ and by definition of $`f_o`$ comprises odd positive integers only.
 
@@ -81,7 +81,7 @@ We can further consider Odd-Collatz _sequences_, which will comprise the station
 
 For monotonically increasing subsequences, all $`f_o^i(n)`$ within the monotonically increasing subsequence are of the form $`4m_i+3`$ (except the last element of the subsequence which starts a new monotonically decreasing subsequence); similar for monotonically decreasing subsequences vis-a-vis $`4m_i+1`$.
 
-Odd-Collatz sequences comprise alternating monotonically increasing and monotonically decreasing subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing) stationary subsequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains an element of value $`1`$.
+Odd-Collatz sequences comprise alternating monotonically increasing and monotonically decreasing subsequences, possibly followed by the stationary subsequence containing only the value $`1`$. The Collatz Conjecture is trivially equivalent to the conjecture that, regardless of the starting value $`n`$, _all_ infinite Odd-Collatz sequences have a (trailing infinite) stationary subsequence, which is again exactly equivalent to the conjecture that _every_ infinite Odd-Collatz sequence contains the value $`1`$.
 
 ## Lemma 1C
 
