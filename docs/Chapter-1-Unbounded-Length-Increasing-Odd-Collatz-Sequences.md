@@ -10,6 +10,8 @@ Here we assume familiarity with the above basic definitions, and consider a mino
 
 Accordingly we consider odd integers only, and define the following (Odd-Collatz) generator function:
 
+### Definition 1A
+
 &nbsp;&nbsp;&nbsp;&nbsp;$`f_o(n) = m`$, where $`m`$ is odd and $`3n + 1 = 2^i.m`$, defined for odd positive $`n`$
  
 Intuitively, the Odd-Collatz generator function computes the characteristic $`3n+1`$ Collatz generator function _and_ removes all multiples of $`2`$ in a single step.
@@ -63,7 +65,17 @@ QED
   2. $`n = 4m+1`$, $`m > 0`$, where $`f_o(n) < n`$
   3. $`n = 4m+3`$, $`m >= 0`$, where $`f_o(n) > n`$
 
-Note that this covers all odd positive integers $`n`$.
+Note that this covers all odd positive integers $`n`$. Since the three cases are non-intersecting and cover all (positive) odd integers n, we can strengthen [Lemma 1A](#lemma-1a) and [Lemma 1B](#lemma-1b) as follows:
+
+## Lemma 1A'
+
+$`f_o(n) < n`$ for positive odd $`n`$ *iff* $`n = 4m+1`$, where $`m`$ is a positive integer
+
+## Lemma 1B'
+
+$`f_o(n) > n`$ for positive odd $`n`$ *iff* $`n = 4m+3`$, where $`m`$ is a non-negative integer
+
+## Odd-Collatz Sequences
 
 We can further consider Odd-Collatz _sequences_, which will comprise the stationary (trailing) subsequence $`1, 1, 1, \dots`$, monotonically increasing subsequences where $`f_o^i(n) < f_o^{i+1}(n) < f_o^{i+2}(n) < \dots`$, and monotonically decreasing subsequences where $`f_o^i(n) > f_o^{i+1}(n) > f_o^{i+2}(n) > \dots`$
 
@@ -73,7 +85,7 @@ Odd-Collatz sequences comprise alternating monotonically increasing and monotoni
 
 ## Lemma 1C
 
-$`f_o(4n+3) = 4f_o(n)+3`$ if $`n = 4m+3`$
+$`f_o(4n+3) = 4f_o(n)+3`$ if $`n = 4m+3`$, where $`m`$ is a non-negative integer
 
 ### Proof
 
