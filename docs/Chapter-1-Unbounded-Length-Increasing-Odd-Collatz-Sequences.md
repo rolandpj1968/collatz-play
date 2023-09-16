@@ -28,7 +28,9 @@ Some examples of Odd-Collatz sequences are the following [with corresponding Col
  - $`3, 5, 1, 1, ...`$ [$`3, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1, ...`$]
  - $`7, 11, 17, 13, 5, ...`$ [$`7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, ...`$]
 
-It can be observed that the Odd-Collatz sequences are significantly more compact than Collatz sequences, and arguably focus on the more interesting transitions between odd numbers. 
+It can be observed that the Odd-Collatz sequences are significantly more compact than Collatz sequences, and arguably focus on the more interesting transitions between odd numbers.
+
+Since $`f_o`$ is defined only over the domain of odd positive integers, in the following we will generally omit explicitly specifying that the argument $`n`$ in the expression $`f_o(n)`$ is positive, odd and integer, but these extra contraints are implicit and assumed.
 
 ## Lemma 1A
 
@@ -69,11 +71,11 @@ Note that this covers all odd positive integers $`n`$. Since the three cases are
 
 ## Lemma 1A'
 
-$`f_o(n) < n`$ for positive odd $`n`$ *iff* $`n = 4m+1`$, where $`m`$ is a positive integer
+$`f_o(n) < n`$ *iff* $`n = 4m+1`$, where $`m`$ is a positive integer
 
 ## Lemma 1B'
 
-$`f_o(n) > n`$ for positive odd $`n`$ *iff* $`n = 4m+3`$, where $`m`$ is a non-negative integer
+$`f_o(n) > n`$ *iff* $`n = 4m+3`$, where $`m`$ is a non-negative integer
 
 ## Odd-Collatz Sequences
 
