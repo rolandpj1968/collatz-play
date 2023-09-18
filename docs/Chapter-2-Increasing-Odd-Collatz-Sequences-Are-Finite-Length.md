@@ -66,13 +66,13 @@ By reductio ad absurdum.
 
 Assume that there exists a monotonically increasing Odd-Collatz subsequence of infinite length, and consider the first value, $`n`$ of this subsequence.
 
-Let $`i = \lfloor log_2(n) \rfloor + 2`$, where $`\lfloor \rfloor`$ is the integer *floor* function defined as $`\lfloor x \rfloor`$, for real x, is the largest integer less than or equal to $`x`$.
+Let $`i = \lfloor log_2(n) \rfloor + 2`$, where $`\lfloor x \rfloor`$ is the integer *floor* function defined as $`\lfloor x \rfloor`$, for real x, is the largest integer less than or equal to $`x`$.
 
-$`n > 2`$ by [trivial empiricism](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#definition-1a), hence we only need to consider the case $`i > 2`$ and so [Lemma 2B](#lemma-2b) applies .
+We already know that $`n > 2`$ by [trivial empiricism](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#definition-1a), hence we only need to consider the case $`i > 2`$ and so [Lemma 2B](#lemma-2b) applies .
 
 By [Lemma 2B](#lemma-2b) we have that the smallest value $`n'`$ for which $`n'`$ is the initial value of a monotonically increasing Odd-Collatz subsequence of length $`i`$, is $`n' = 2^{i} - 1`$.
 
-Moreover $`log_2(n) \leq i-2`$, i.e. $`log_2(n) < i-1`$ by the definition of $`i`$, and hence $`n < 2^{i-1} < 2^i - 1 = n'`$.
+Moreover $`log_2(n) \leq i-2`$, i.e. $`log_2(n) < i-1`$, by the definition of $`i`$, and hence $`n < 2^{i-1} < 2^i - 1 = n'`$.
 
 Lastly, since we assumed that $`n`$ is the first value of an infinite monotonically increasing Odd-Collatz subsequence, it is also the first value of a monotonically increasing Odd-Collatz subsequence of length $`i`$. This is a clear contradiction, since $`n`$ is smaller than the minimum required first value of such a subsequence.
 
