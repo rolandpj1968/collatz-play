@@ -8,7 +8,7 @@ We first establish a closed-form expression for all elements of a monotonically 
 
 ## Lemma 2A
 
-$`n`$ is the first value of a monotonically increasing Odd-Collatz subsequence of length $`i > 1`$ *iff* $`n = 2^{i}m + 2^{i} - 1`$, $`f_o^i(n) = 2.3^{i-1}m + 2.3^{i-1} - 1`$ for some $`m \geq 0`$.
+The Odd-Collatz subsequence $`n, \dots, f_o^{i-1}(n)`$  of length $`i > 1`$ is monotonically increasing *iff* $`n = 2^{i}m + 2^{i} - 1`$, $`f_o^{i-1}(n) = 2.3^{i-1}m + 2.3^{i-1} - 1`$ for some $`m \geq 0`$.
 
 *Note: $`i > 0`$ implicitly since a (sub)sequence of length less than one is not well-defined. We explicitly exclude the trivial case of length one Odd-Collatz sequences here.*
 
@@ -18,7 +18,7 @@ By induction on $`i`$.
 
 #### Base Case
 
-Take $`i = 2`$, the base case for $`i > 1`$ and consider the Odd-Collatz subsequence $`n, f_o(n)`$. The proof is a direct result of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3` for some $`m \geq 0`, and $`4m+3`$ is trivially rewritten as $`2^{2}m + 2^{2} - 1`$ as required. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5`$ which can be trivially rewritten as $`2.3^{2-1}m + 2.3^{2-1} - 1`$.
+The proof for the base case $`i = 2`$ is a restatement of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3 = 2^{2}m + 2^{2} - 1` for some $`m \geq 0`. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5 = 2.3^{2-1}m + 2.3^{2-1} - 1`$.
 
 #### Inductive Step
 
