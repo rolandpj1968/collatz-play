@@ -18,7 +18,7 @@ By induction on $`i`$.
 
 #### Base Case
 
-The proof for the base case $`i = 2`$ is a restatement of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3 = 2^{2}m + 2^{2} - 1` for some $`m \geq 0`. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5 = 2.3^{2-1}m + 2.3^{2-1} - 1`$.
+The proof for the base case $`i = 2`$ is a restatement of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3 = 2^{2}m + 2^{2} - 1`$ for some $`m \geq 0`. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5 = 2.3^{2-1}m + 2.3^{2-1} - 1`$.
 
 #### Inductive Step
 
