@@ -18,7 +18,7 @@ By induction on $`i`$.
 
 #### Base Case
 
-Take $`i = 2`$, the base case for $`i > 1`$ and consider the Odd-Collatz subsequence $`n, f_o(n)`$. The proof is a direct result of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)` *iff* $`n = 4m+3` for some $`m \geq 0`, and $`4m+3`$ is trivially rewritten as $`2^{2}m + 2^{2} - 1`$ as required. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5`$ which can be trivially rewritten as $`2.3^{2-1}m + 2.3^{2-1} - 1`$.
+Take $`i = 2`$, the base case for $`i > 1`$ and consider the Odd-Collatz subsequence $`n, f_o(n)`$. The proof is a direct result of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3` for some $`m \geq 0`, and $`4m+3`$ is trivially rewritten as $`2^{2}m + 2^{2} - 1`$ as required. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5`$ which can be trivially rewritten as $`2.3^{2-1}m + 2.3^{2-1} - 1`$.
 
 #### Inductive Step
 
