@@ -1,8 +1,8 @@
 # Chapter 2 - Monotonically Increasing Odd-Collatz Subsequences Are Finite in Length
 
-In [Chapter 1](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md) we introduced the [definition of the Odd-Collatz generator function](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#definition-1a) $`f_o`$ which produces _Odd-Collatz_ sequences and proved the result that there are monotonically increasing Odd-Collatz subsequences of arbitrarily length.
+In [Chapter 1](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md) we introduced the [definition of the Odd-Collatz generator function](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#definition-1a) $`f_o`$ which produces _Odd-Collatz_ sequences, and proved the result that there are monotonically increasing Odd-Collatz subsequences of arbitrarily length.
 
-In this chapter we will show that although there is no upper bound on the length of a monotonically increasing Odd-Collatz subsequence, all monotonically increasing Odd-Collatz subsequences are finite length.
+In this chapter we will show that although there is no upper bound on the length of a monotonically increasing Odd-Collatz subsequence, all monotonically increasing Odd-Collatz subsequences are finite in length.
 
 We first establish a precise closed-form formula for all elements of a monotonically increasing Odd-Collatz subsequence.
 
@@ -30,7 +30,7 @@ We now prove the inductive step.
 
 Accordingly, assume that the lemma is true for all $`j < i`$.
 
-We first prove the forwards direction of the inductive case. Assume that $`n, f_o(n), \dots, f_o^{i-1}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i`$. Now $`n, f_o(n), \dots, f_o^{i-2}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i-1`$ and hence by the inductive assumption with $`j = i-1`$ we have that $`n = 2^{i-1}m' + 2^{i-1} - 1`$, $`f_o^{i-2}(n) = 2.3^{i-1}m' + 2.3^{i-1} - 1`$ for some $`m' \geq 0`$ by the inductive assumption.
+We first prove the forwards direction of the inductive case. Assume that $`n, f_o(n), \dots, f_o^{i-1}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i`$. Now $`n, f_o(n), \dots, f_o^{i-2}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i-1`$ and hence with $`j = i-1`$ we have that $`n = 2^{i-1}m' + 2^{i-1} - 1`$, and $`f_o^{i-2}(n) = 2.3^{i-1}m' + 2.3^{i-1} - 1`$ for some $`m' \geq 0`$ by the inductive assumption.
 
 Consider $`3f_o^{i-2}(n) + 1 = 3(2.3^{i-1}m' + 2.3^{i-1} - 1) + 1 = 2.3^{i}m' + 2.3^{i} - 3 + 1 = 2(3^{i}m' + 3^{i} - 1)`$. Hence $`f_o^{i-1}(n) = 3^{i}m' + 3^{i} - 1`$ only if $`m'`$ is odd, since $`3^{i}`$ is odd and $`3^{i} - 1`$ is even given that $`i > 0`$.
 
