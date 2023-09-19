@@ -30,7 +30,7 @@ We first prove the forwards direction of the inductive case. Assume that $`n, f_
 
 Consider $`3f_o^{i-2}(n) + 1 = 3(2.3^{i-2}m' + 2.3^{i-2} - 1) + 1 = 2.3^{i-1}m' + 2.3^{i-1} - 3 + 1 = 2(3^{i-1}m' + 3^{i-1} - 1)`$. From that we see that $`f_o^{i-1}(n) = 3^{i-1}m' + 3^{i-1} - 1`$ only if $`m'`$ is odd, since $`3^{i-1}`$ is odd and $`3^{i-1} - 1`$ is even for any $`i`$.
 
-It follows that $`m' = 2m+1`$ for some $`m > 0`$, and substituting this expression back, we get $`n = 2^{i-1}(2m+1) + 2^{i-1} - 1 = 2^{i}m + 2^{i-1} + 2^{i-1} - 1 = 2^{i}m + 2^{i} - 1`$ as required. In addition, $`f_o^{i-1}(n) = 3^{i-1}(2m+1) + 3^{i-1} - 1 = 2.3^{i-1}m + 3^{i-1} + 3^{i-1} - 1 = 2.3^{i-1}m + 2.3^{i-1} - 1`$ as required.
+It follows that $`m' = 2m+1`$ for some $`m \geq 0`$, and substituting this expression back, we get $`n = 2^{i-1}(2m+1) + 2^{i-1} - 1 = 2^{i}m + 2^{i-1} + 2^{i-1} - 1 = 2^{i}m + 2^{i} - 1`$ as required. In addition, $`f_o^{i-1}(n) = 3^{i-1}(2m+1) + 3^{i-1} - 1 = 2.3^{i-1}m + 3^{i-1} + 3^{i-1} - 1 = 2.3^{i-1}m + 2.3^{i-1} - 1`$ as required.
 
 This proves the forwards direction for the inductive step.
 
