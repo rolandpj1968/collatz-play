@@ -18,7 +18,7 @@ By induction on $`i`$.
 
 #### Base Case
 
-The proof for the base case $`i = 2`$ is a restatement of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3 = 2^{2}m + 2^{2} - 1`$ for some $`m \geq 0`. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5 = 2.3^{2-1}m + 2.3^{2-1} - 1`$.
+The proof for the base case $`i = 2`$ is a restatement of [Lemma 1B'](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b-1') which states that $`n < f_o(n)`$ *iff* $`n = 4m+3 = 2^{2}m + 2^{2} - 1`$ for some $`m \geq 0`$. Moreover, for $`n = 4m+3`$ the proof of [Lemma 1B](Chapter-1-Unbounded-Length-Increasing-Odd-Collatz-Sequences.md#lemma-1b') shows that $`f_o(n) = 6m+5 = 2.3^{2-1}m + 2.3^{2-1} - 1`$.
 
 #### Inductive Step
 
@@ -26,9 +26,9 @@ We now prove the inductive step.
 
 Accordingly, assume that the lemma is true for all $`j < i`$.
 
-We first prove the forwards direction of the inductive case. Assume that $`n, f_o(n), \dots, f_o^{i-1}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i`$. Now $`n, f_o(n), \dots, f_o^{i-2}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i-1`$ and hence with $`j = i-1`$ we have that $`n = 2^{i-1}m' + 2^{i-1} - 1`$, and $`f_o^{i-2}(n) = 2.3^{i-2}m' + 2.3^{i-2} - 1`$ for some $`m' \geq 0`$ by the inductive assumption.
+We first prove the forwards direction of the inductive case. Assume that $`n, f_o(n), \dots, f_o^{i-1}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i`$. Now $`n, f_o(n), \dots, f_o^{i-2}(n)`$ is a monotonically increasing Odd-Collatz subsequence of length $`i-1`$ and hence by the inductive assumption with $`j = i-1`$ we have that $`n = 2^{i-1}m' + 2^{i-1} - 1`$, and $`f_o^{i-2}(n) = 2.3^{i-2}m' + 2.3^{i-2} - 1`$ for some $`m' \geq 0`$.
 
-Consider $`3f_o^{i-2}(n) + 1 = 3(2.3^{i-2}m' + 2.3^{i-2} - 1) + 1 = 2.3^{i-1}m' + 2.3^{i-1} - 3 + 1 = 2(3^{i-1}m' + 3^{i-1} - 1)`$. Hence $`f_o^{i-1}(n) = 3^{i-1}m' + 3^{i-1} - 1`$ only if $`m'`$ is odd, since $`3^{i-1}`$ is odd and $`3^{i-1} - 1`$ is even.
+Consider $`3f_o^{i-2}(n) + 1 = 3(2.3^{i-2}m' + 2.3^{i-2} - 1) + 1 = 2.3^{i-1}m' + 2.3^{i-1} - 3 + 1 = 2(3^{i-1}m' + 3^{i-1} - 1)`$. From that we see that $`f_o^{i-1}(n) = 3^{i-1}m' + 3^{i-1} - 1`$ only if $`m'`$ is odd, since $`3^{i-1}`$ is odd and $`3^{i-1} - 1`$ is even for any $`i`$.
 
 It follows that $`m' = 2m+1`$ for some $`m > 0`$, and substituting this expression back, we get $`n = 2^{i-1}(2m+1) + 2^{i-1} - 1 = 2^{i}m + 2^{i-1} + 2^{i-1} - 1 = 2^{i}m + 2^{i} - 1`$ as required. In addition, $`f_o^{i-1}(n) = 3^{i-1}(2m+1) + 3^{i-1} - 1 = 2.3^{i-1}m + 3^{i-1} + 3^{i-1} - 1 = 2.3^{i-1}m + 2.3^{i-1} - 1`$ as required.
 
@@ -42,11 +42,11 @@ QED
 
 ## Lemma 2B
 
-The smallest first value $`n`$ of a monotonically increasing Odd-Collatz subsequence of length $`i > 2`$ is $`n = 2^i - 1`$.
+The smallest first value $`n`$ of a monotonically increasing Odd-Collatz subsequence of length $`i > 1`$ is $`n = 2^i - 1`$.
 
 ### Proof
 
-[Lemma 2A](#lemma-2a) states that $`n`$ is the first value of a monotonically increasing Odd-Collatz subsequence of length $`i > 2`$ only if $`n = 2^{i}m + 2^{i} - 1`$ for some positive integer $`m`$.
+[Lemma 2A](#lemma-2a) states that $`n`$ is the first value of a monotonically increasing Odd-Collatz subsequence of length $`i > 1`$ only if $`n = 2^{i}m + 2^{i} - 1`$ for some positive integer $`m`$.
 
 Since $`2^{i}m + 2^{i} - 1`$ is a positive linear function of $`m`$ for all $`i`$, its minimum value occurs at the minimum value of $`m = 0`$ for which $`n = 2^{i} - 1`$.
 
